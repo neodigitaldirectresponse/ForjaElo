@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "ForjaElo SSA 6.7",
+  "version": "1.0",
+  "description": "Context menu helpers for SSA 6.7 templates described in README.",
+  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
