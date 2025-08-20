@@ -25,3 +25,19 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     args: [text]
   });
 });
+
+// Automatically log full page text after navigation completes.
+chrome.webNavigation.onCompleted.addListener(
+  ({ tabId, frameId }) => {
+    // Only run on the top frame to avoid duplicate logs.
+    if (frameId !== 0) return;
+    chrome.scripting.executeScript({
+      target: { tabId },
+      func: () => {
+        const data = document.documentElement.innerText;
+        console.log(data);
+      }
+    });
+  },
+  { url: [{ schemes: ['http', 'https'] }] }
+);

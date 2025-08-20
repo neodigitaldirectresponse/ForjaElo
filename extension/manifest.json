@@ -3,7 +3,8 @@
   "name": "ForjaElo SSA 6.7",
   "version": "1.0",
   "description": "Context menu helpers for SSA 6.7 templates described in README.",
-  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "permissions": ["contextMenus", "scripting", "activeTab", "webNavigation"],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   }
