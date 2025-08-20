@@ -1,0 +1,17 @@
+{
+  "name": "forjaelo",
+  "version": "1.0.0",
+  "description": "Chrome extension with SSA 6.7 helpers for ForjaElo",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "playwright": "^1.55.0"
+  }
+}
